@@ -1,0 +1,50 @@
+.items {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 30px;
+}
+.grid-items {
+  /* border: 1px solid black; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.grid-items img {
+  width: 100px;
+  height: 100px;
+}
+.pricetag {
+  background-color: blue;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+}
+
+.tagsitem {
+  display: flex;
+  gap: 10px;
+}
+
+.desc {
+  text-align: start;
+  padding: 10px;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

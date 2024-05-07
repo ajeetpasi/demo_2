@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+import Home from "./component/home/Home";
+import NavBar from "./component/navbar/Navbar";
+import TOdoForm from "./component/todos/todoform";
+import Weather from "./component/weatherApp/WeatherApp";
+import Movies from "./component/movies/Movies";
+import YouTube from "./component/youtube/Youtube";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import YouTubeDetail from "./component/youtube/YoutubeDetail";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      {/* <Home /> */}
+      {/* <TOdoForm /> */}
+      {/* <Weather /> */}
+      {/* <Movies /> */}
+
+      {/* <YouTube /> */}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<YouTube />}>
+            {/* <Route index element={<Home />} /> */}
+          </Route>
+          <Route path="/home" element={<YouTubeDetail />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+.navbar {
+  background-color: brown;
+}
+
+.navitems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navitems ul {
+  display: flex;
+}
+
+.navitems li {
+  margin-right: 30px;
+  list-style: none;
+}
